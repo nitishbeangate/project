@@ -1,0 +1,83 @@
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+    background: rebeccapurple;
+}
+#search_form label
+{
+color: #ff0063;
+}
+.back_banner
+{
+	background: url(../images/bus_banner.jpg);
+	height: 450px;
+    overflow: hidden;
+    width: 100%;
+    background-size: 100% auto;
+    background-repeat: round;
+}
+#search_form
+{
+	margin-top: 12%;
+	background: #fff;
+    padding: 30px 15px 30px;
+    border-radius: 4px;
+    overflow: auto;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    color:blue;
+    background-color:;
+}
+/* navbar design */
+.navbar
+{
+	margin-bottom: 0px;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus
+{
+	color: blue;
+}
+/*panel design*/
+.panel_design
+{
+	border-top:5px solid #337ab7;
+}
+/*vertical line*/
+.vl {
+  border-left: 6px solid green;
+  height:auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 10px;
+}
+/* seat design*/
+.select-seat  input{
+  display: none;
+}
+
+.select-seat label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  line-height: 50px;
+  cursor: pointer
+}
+
+#small:checked ~ label[for="small"] {
+  background: #999;
+  color: #fff;
+}
+ .seatdesign button , .seatdesign1 button
+ {
+width: 50px;
+margin-top: 2px;
+ }

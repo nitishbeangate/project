@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>travelline</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="traveline online booking system">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Travelline</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">Home</a></li>
+        
+        <li><a href="#">About</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<hr>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<img src="../images/124.jpg" class="img-responsive" style="max-height: 100px; width: 100%;">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="list-group">
+    <a href="#" class="list-group-item disabled">Filter</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+  </div>
+		</div>
+		<div class="col-md-9">
+
+			<div class="row">
+				<div class="col-md-2">
+					<b>22 Buses</b> Found
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>22 Buses Found</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" >
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+      <div class="panel-heading">Seat Available Details</div>
+      <div class="panel-body">
+      	<div class="row">
+      		<div class="col-md-4">
+      			<div class="panel panel-default panel_design">
+  					<div class="panel-body">
+  						<div class="row">
+  							<div class="col-md-12">
+  								<img src="../images/steering.png " class="pull-right" >
+  							</div>
+  						</div>
+  						<hr>
+  						<div class="row">
+  							<div class="col-md-4 col-md-offset-1">
+  								<div class="seatdesign"></div>
+  							</div>
+  							<div class="col-md-2"></div>
+  							<div class="col-md-5">
+  								<div class="seatdesign1"></div>
+  							</div>
+  						</div>
+  						<hr>
+  						<div class="row">
+  							<div class="col-md-6">
+  								<button class="btn btn-default disabled">A</button> <b>Available</b>
+  							</div>
+  							<div class="col-md-6">
+  								<button class="btn btn-danger">B</button> <b>Booked</b>
+  							</div>
+  						</div>
+  					</div>
+					</div>
+      		</div>
+      		<div class="col-md-7 col-md-offset-1">
+      			<div class="panel panel-primary panel_design">
+                    <div class="panel-body">Contact Details</div>
+                </div>
+                <div class="row">
+                    	<div class="col-md-4">
+                    		<input type="text" name="" placeholder="Enter Name" class="form-control input-lg">
+                    	</div>
+                    	<div class="col-md-4">
+                    		<input type="email" name="" placeholder="Enter Email"  class="form-control input-lg">
+                    	</div>
+                    	<div class="col-md-4">
+                    		<input type="text" name="" maxlength="10" placeholder="Enter Contact" class="form-control input-lg">
+                    	</div>
+                    </div>
+                    <br>
+      			<div class=" ">
+                    <div class="panel-body">Passenger Details</div>
+                </div>
+                <div class="row">
+                    	<div class="col-md-4">
+                    		<input type="text" name="" placeholder="Enter Name" class="form-control">
+                    	</div>
+                    	<div class="col-md-4">
+                    		<input type="email" name="" placeholder="Enter Email"  class="form-control">
+                    	</div>
+                    	<div class="col-md-4">
+                    		<input type="text" name="" maxlength="10" placeholder="Enter Contact" class="form-control">
+                    	</div>
+                    </div>
+                <hr>
+      		</div>
+
+      	</div>
+
+
+
+      </div>
+    </div>
+		</div>
+	</div>
+ </div>
+
+</body>
+
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		generatesit();
+		var bookedsit=[1,5,7,9,12];
+		function generatesit()
+		{
+			for (var i=1;i<=50;i++) {
+	   var a="<button type='button' class='btn btn-default'>"+i+"</button> ";
+	    	var b="<button type='button' class='btn btn-danger'>"+i+"</button> ";
+
+	    if (i<=25) {
+
+	    $(".seatdesign").append(a);
+	    continue;
+	    }
+	    $(".seatdesign1").append(a);
+	}
+	    }
+
+
+	});
+</script>
+</html>
