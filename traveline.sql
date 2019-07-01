@@ -73,8 +73,8 @@ CREATE TABLE `bus_route` (
   `bus_id` varchar(11) NOT NULL,
   `from_city` int(11) NOT NULL,
   `to_city` int(11) NOT NULL,
-  `start_time` time(5) NOT NULL,
-  `end_time` time(5) NOT NULL,
+  `start_time` time NOT NULL,
+  `end_time` time NOT NULL,
   `fare` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
