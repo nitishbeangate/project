@@ -40,12 +40,9 @@ color: #ff0063;
 }
 /*vertical line*/
 .vl {
-  border-left: 6px solid green;
-  height:auto;
-  position: absolute;
-  left: 50%;
+  border-left: 2px solid green;
+  min-height:50px;
   margin-left: -3px;
-  top: 10px;
 }
 /* seat design*/
 .select-seat  input{
@@ -102,6 +99,7 @@ margin-top: 2px;
 }
 @media (min-width: 768px)
 {
+
 .navbar-fixed-top, .navbar-fixed-bottom {
     border-radius: 0;
 }
@@ -169,6 +167,7 @@ p.bold {
 .navbar-header i {
     color: #666;
 }
+
 }
 .navbar.navbar-custom ul.nav.navbar-nav {
     margin-top: 15px;
@@ -202,4 +201,28 @@ p.bold {
     font-size: 14px;
     background: rgb(0, 66, 138);
     padding: 0px 0px 30px;
+}
+/*glyphicon design*/
+.icon{
+    padding: 10px 0px 10px 15px;
+    border-right: 1px solid beige;
+}
+.icon_col{
+    padding: 10px 0px 10px 0px;
+    border-right: 1px solid beige;
+}
+.icon_col .btn
+{
+    margin: 10px 29px;
+}
+.icon span,.icon_col span
+{
+    text-align: center;
+    padding: 20px;
+}
+.icon p, .icon_col p
+{
+    text-align: center;
+    font-size:19px;
+    border-bottom: 1px solid #dedece;
 }
