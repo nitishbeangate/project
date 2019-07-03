@@ -10,10 +10,6 @@
     border-color: #fff;
     background: rebeccapurple;
 }
-#search_form label
-{
-color: #ff0063;
-}
 .back_banner
 {
 	background: url(../images/bus_banner.jpg);
@@ -120,6 +116,7 @@ p.bold {
 }
 }
 @media (min-width: 768px)
+{
 .navbar {
     border-radius: 4px;
 }
@@ -128,6 +125,7 @@ p.bold {
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
+}
 }
 .top-area {
     background: #3fbbc0;
@@ -225,4 +223,41 @@ p.bold {
     text-align: center;
     font-size:19px;
     border-bottom: 1px solid #dedece;
+}
+.searchform .form-control {
+    background-color: #fff;
+    height: 65px;
+    padding: 0px 15px;
+    padding-top: 24px;
+    color: #191a1e;
+    border: 2px solid #dfe5e9;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.searchform span {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
+    height: 24px;
+    font-size: 12px;
+    color: #98c9ee;
+}
+.searchform .submit-btn {
+    color: #fff;
+    background-color: #4fa3e3;
+    font-weight: 400;
+    height: 65px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
