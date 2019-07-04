@@ -261,3 +261,50 @@ p.bold {
     border-radius: 4px;
     text-transform: uppercase;
 }
+.btn:hover {
+  color: #9050AA;
+  border-color: currentColor;
+  background-color: white;
+}
+label
+{
+    color: #2dce89!important;
+    font-weight: 100;
+}
+.form
+{
+
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    padding: .625rem .75rem;
+    transition: all .2s cubic-bezier(.68,-.55,.265,1.55);
+    color: #8898aa;
+    border: 1px solid #cad1d7;
+    border-radius: .25rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: none;
+}
+.btninfo {
+    line-height: 2;
+    border-color: #11cdef;
+    color: #fff;
+    background-color: #5e72e4;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.btnwarn {
+    line-height: 2;
+    color: #fff;
+    border-color: #fb6340;
+    background-color: #fa3a0e;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+/* make sure we have a visible focus ring */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5),
+    0 0 0 1.5px rgba(255, 105, 180, 0.5);
+}

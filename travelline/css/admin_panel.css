@@ -13,10 +13,24 @@
 .text-primary {
     color: #007AFF !important;
 }
+.panel-text
+{
+    color: #4e73df!important;
+}
 .fa-stack-2x {
     font-size: 2em;
 }
 .back-bg
 {
     padding: 10px;
+}
+.back-bg a:hover
+{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+.sidebar a.list-group-item {
+    color: #555;
+    padding: 18px;
 }
