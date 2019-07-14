@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AddbusRoute`(in p_locfrom varchar(20),in p_loc_to varchar(20),in p_distance int(5),in p_fare int(5), out routeid int(5))
+BEGIN
+INSERT INTO bus_route(loc_from,loc_to,distance,fare) VALUES (p_locfrom,p_loc_to,p_distance,p_fare);
+set routeid=LAST_INSERT_ID();
+END
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addBus`(inout p_busno varchar(15),in p_busname varchar(20),in
+p_bus_type varchar(20),in p_total_seats int(5))
+BEGIN
+INSERT INTO bus_details(bus_no,bus_name,bus_type,total_seats) VALUES (p_busno,p_busname,p_bus_type,p_total_seats);
+END
+
+CREATE PROCEDURE addBusSchedule (fk_bus_routeid int(5),fk_bus_regno varchar(20),arrival_time time,depart_time time)
+BEGIN
+INSERT INTO bus_schedule (fk_bus_routeid,fk_bus_regno,arrival_time,depart_time) 
+VALUES (fk_bus_routeid,fk_bus_regno,arrival_time,depart_time);
+END
