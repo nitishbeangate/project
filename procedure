@@ -16,3 +16,4 @@ BEGIN
 INSERT INTO bus_schedule (fk_bus_routeid,fk_bus_regno,arrival_time,depart_time) 
 VALUES (fk_bus_routeid,fk_bus_regno,arrival_time,depart_time);
 END
+https://www.tutorialspoint.com/log4j/log4j_mock_test.htm
