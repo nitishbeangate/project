@@ -1,0 +1,6 @@
+create table employee(Employeeid number, Employeename Varchar2(20),emailid varchar2(20) unique, dob date,doj date,managerid number, rating number add constraints employeeid_pk PRIMARY KEY employee);
+create table manager(managerid number primary key,
+references employeeid_fk Foreign key employee(employeeid_pk) );
+create table payroll (employeeid number, Basicpay number , HRA number, DRA number ,Deduction number);
+create table admin(userid number, password varchar2(10));
+create table accountadmin(employeeid number,salary number,month date);
