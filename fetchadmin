@@ -1,0 +1,98 @@
+package com.virtusa.models;
+
+public class Adminlist {
+private int aid;
+private String aname;
+private String aemail;
+
+public String getAname() {
+	return aname;
+}
+public int getAid() {
+	return aid;
+}
+public void setAid(int aid) {
+	this.aid = aid;
+}
+public void setAname(String aname) {
+	this.aname = aname;
+}
+public String getAemail() {
+	return aemail;
+}
+public void setAemail(String aemail) {
+	this.aemail = aemail;
+}
+
+
+}
+//pojo class end
+//impl
+package com.virtusa.implementation;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+import com.virtusa.dao.AdminDao;
+import com.virtusa.helper.MYSQLHelper;
+import com.virtusa.models.Adminlist;
+import org.apache.log4j.Logger;
+public class AdminImpl implements AdminDao {
+private Connection conn;
+private Statement statement;
+private ResultSet rs;
+private List<Adminlist> adminlist;
+final static Logger logger = Logger.getLogger(AdminImpl.class);
+	@Override
+	
+	//method to fetch all admin details
+	public List<Adminlist> GetAdminDetail() throws SQLException {
+		Adminlist adlist;
+    conn=MYSQLHelper.getConnection(); //receiving connection
+    adminlist=new ArrayList<Adminlist>(); //list that store admin details
+     //    loading resource bundle
+    ResourceBundle rb=ResourceBundle.getBundle("com/virtusa/resources/db");
+    String selectquery=rb.getString("AdminDetail");
+    statement=conn.createStatement();
+    rs=statement.executeQuery(selectquery);
+    try
+    {
+    while(rs.next())	
+    {
+    	adlist=new Adminlist();
+    	adlist.setAid(rs.getInt(1));
+    	adlist.setAname(rs.getString(2));
+    	adlist.setAemail(rs.getString(3));
+    	adminlist.add(adlist);
+    }
+    }
+    catch(SQLException e)
+    {
+    	logger.error("This is error : " + e.getMessage());
+    	e.printStackTrace();
+    }
+    finally {
+		conn.close();
+	}
+		return adminlist;
+	}
+
+}
+
+
+//package com.virtusa.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.virtusa.models.Adminlist;
+
+public interface AdminDao {
+public List<Adminlist> GetAdminDetail() throws SQLException;
+
+}
+
